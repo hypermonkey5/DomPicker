@@ -1,0 +1,15 @@
+{
+  "name": "dompickr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://spring.ics.nitech.ac.jp:8081/git/iwasato/DomPickr.git"
+  },
+  "author": "iwasato",
+  "license": "ISC"
+}
