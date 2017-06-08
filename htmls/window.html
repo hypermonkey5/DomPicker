@@ -2,9 +2,60 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<!-- mdl -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.teal-green.min.css"/>
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+	<!-- style -->
+	<link rel="stylesheet" type="text/css" href="./css/window.css">
+
+	<!-- js -->
+	<script defer src="./js/window.js"></script>
 	<title>DomPickr</title>
 </head>
 <body>
-<h1>Hello World!</h1>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	<header class="mdl-layout__header">
+		<div class="mdl-layout__header-row">
+			<span class="mdl-layout-title">DomPickr</span>
+			<div class="mdl-layout-spacer"></div>
+		</div>
+	</header>
+	<main class="mdl-layout__content">
+		<div class="dmp-layout__table">
+			<div id="dmp-layout__main-frame" class="dmp-layout__table-cell">
+				<div id="dmp-components__web" class="dmp-layout__main-content is-active">
+					<div id="dmp-tabs" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+						<div id="dmp-tabs__tab-bar" class="mdl-tabs__tab-bar">
+						</div>
+						<button id="dmp-tabs__add-tab" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+							<i class="material-icons">add</i>
+						</button>
+						<div id="dmp-components__web-header" class="mdl-color--teal-A700">
+				        	<div class="dmp-components__web-header-row">
+				        		<button id="dmp-components__web-back" type="button" class="material-icons">arrow_back</button>
+				        		<button id="dmp-components__web-forward" type="button" class="material-icons">arrow_forward</button>
+				        		<button id="dmp-components__web-reload" type="button" class="material-icons">refresh</button>
+				        		<div id="dmp-components__web-search-bar" class="mdl-textfield mdl-js-textfield">
+				        			<input type="text" id="dmp-components__web-search-input" class="mdl-textfield__input">
+				        			<label id="dmp-components__web-search-label" class="mdl-textfield__label" for="dmp-components__web-search-input">URL or KEYWORDS</label>
+				        		</div>
+			        			<button id="dmp-components__web-favorite" type="button" class="material-icons">star_border</button>
+				        	</div>
+				        	<div id="dmp-components__web-header-favorite" class="dmp-components__web-header-row">
+				        	</div>
+						</div>
+				        <div id="dmp-components__web-frame">
+				        	
+				        </div>
+					</div>
+				</div>
+				<div id="dmp-components__login" class="dmp-layout__main-content">
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
 </body>
 </html>

@@ -1,0 +1,136 @@
+html,body{
+	height: 100%;
+}
+body{
+	margin: 0;
+}
+header{
+	-webkit-app-region: drag;
+	-webkit-user-select: none;
+}
+main{
+	-webkit-app-region: no-drag;
+	height: 100%;
+}
+
+
+
+
+.mdl-layout-title{
+	cursor: default;
+}
+.dmp-layout__table{
+	width: 100%;
+	height: 100%;
+	display: table;
+}
+.dmp-layout__table-cell{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+.dmp-layout__main-content{
+	margin: 0 auto;
+}
+.dmp-layout__main-content .is-active{
+	display: block;
+}
+.dmp-layout__main-content: not(.is-active){
+	display: none;
+}
+.dmp-components__web-header-row{
+	width: 100%;
+	height: 30px;
+}
+.dmp-components__web-header-row button.material-icons{
+	-webkit-border-radius: 10px;
+	background-clip: content-box;
+	background-color: rgba(0,0,0,0);
+	margin-right: 0;
+	padding: 5px;
+	color: white;
+	border: none;
+	outline: none;
+}
+.dmp-components__web-header-row button.material-icons:hover{
+	background-color: rgba(255,255,255,0.3);
+}
+.dmp-components__web-header-row button.material-icons:active{
+	background-color: rgba(255,255,255,0.5);
+}
+.dmp-components__web-header-row button.material-icons.is-favorite{
+	color: #FFBF00;
+	-webkit-border-radius: 10px;
+	background-clip: content-box;
+	background-color: rgba(0,0,0,0);
+	margin-right: 0;
+	padding: 5px;
+	border: none;
+	outline: none;
+}
+.mdl-layout__content{
+	overflow: hidden;
+}
+.dmp-tabs__panel{
+	width: 100%;
+	height: 100%;
+}
+.dmp-tabs__panel webview{
+	width: 100%;
+	height: 100%;
+}
+.mdl-tabs.is-upgraded .mdl-tabs__panel.is-active {
+	height: 100%;
+}
+
+.mdl-tabs.is-upgraded .mdl-tabs__panel:not(.is-active) {
+	height: 0;
+}
+.mdl-tabs.is-upgraded .mdl-tabs__panel {
+	display: block;
+}
+
+#dmp-components__web{
+	width: 100%;
+	height: 100%;
+}
+#dmp-components__web .mdl-tabs{
+	height: 100%;
+}
+#dmp-tabs__tab-bar{
+	width: calc(100% - 64px);
+	margin-top: 1px;
+	border: none;
+	float: left;
+}
+#dmp-tabs__add-tab{
+	width: 64px;
+	height: 49px;
+	box-shadow: none;
+}
+#dmp-components__web-header{
+	width: 100%;
+	height: 60px;
+	margin: 0;
+}
+#dmp-components__web-search-bar{
+	top: -7px;
+	width: calc(100% - 156px);
+	height: 34px;
+	padding: 5px;
+}
+#dmp-components__web-search-input{
+	height: 100%;
+	padding: 0;
+}
+
+#dmp-components__web-search-label{
+	width: calc(100% - 10px);
+	height: 135%;
+	top: 5px;
+	left: 5px;
+}
+#dmp-components__web-frame{
+	width: 100%;
+	height: 100%;
+}
