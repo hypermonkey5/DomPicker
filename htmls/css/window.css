@@ -3,16 +3,15 @@ html,body{
 }
 body{
 	margin: 0;
+	-webkit-user-select: none;
 }
 header{
 	-webkit-app-region: drag;
-	-webkit-user-select: none;
 }
 main{
 	-webkit-app-region: no-drag;
 	height: 100%;
 }
-
 
 
 
@@ -89,6 +88,25 @@ main{
 .mdl-tabs.is-upgraded .mdl-tabs__panel {
 	display: block;
 }
+.dmp-components__web-favorite-button{
+	-webkit-border-radius: 10px;
+	background-color: rgba(0,0,0,0);
+	color: white;
+	border: none;
+	outline: none;
+	float: left;
+	margin-top: 5px;
+	margin-left: 5px;
+}
+.dmp-components__web-favorite-button:hover{
+	background-color: rgba(255,255,255,0.3);
+}
+.dmp-components__web-favorite-button:active{
+	background-color: rgba(255,255,255,0.5);
+}
+
+
+
 
 #dmp-components__web{
 	width: 100%;
@@ -133,4 +151,10 @@ main{
 #dmp-components__web-frame{
 	width: 100%;
 	height: 100%;
+}
+#dmp-components__web-favorite.is-favorite{
+	color: #FFBF00;
+}
+#dmp-conponents__web-favorite:not(.is-favorite){
+	color: white;
 }
