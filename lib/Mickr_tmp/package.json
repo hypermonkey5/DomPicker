@@ -1,0 +1,33 @@
+{
+  "name": "silctron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "babel public/js/src --out-dir public/js/dist/",
+    "dev": "gulp build"
+  },
+  "repository": "",
+  "keywords": [
+    "Electron"
+  ],
+  "author": "ashun",
+  "dependencies": {
+    "autodraw": "^0.1.0",
+    "bson": "*",
+    "copy-paste": "^1.3.0",
+    "desktop-screenshot": "^0.1.1",
+    "express": "^4.15.2",
+    "feedparser": "^2.1.0",
+    "gsap": "^1.19.1",
+    "imagemagick": "^0.1.3",
+    "lodash": "^4.17.4",
+    "node-notifier": "^5.0.2",
+    "node-static": "^0.7.9",
+    "node-uuid": "*",
+    "request": "^2.79.0",
+    "underscore": "^1.8.3",
+    "ws": "*"
+  }
+}

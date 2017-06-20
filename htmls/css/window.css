@@ -13,8 +13,6 @@ main{
 	height: 100%;
 }
 
-
-
 .mdl-layout-title{
 	cursor: default;
 }
@@ -79,7 +77,7 @@ main{
 	height: 100%;
 }
 .mdl-tabs.is-upgraded .mdl-tabs__panel.is-active {
-	height: 100%;
+	height: calc(100% - 109px);
 }
 
 .mdl-tabs.is-upgraded .mdl-tabs__panel:not(.is-active) {
@@ -104,10 +102,24 @@ main{
 .dmp-components__web-favorite-button:active{
 	background-color: rgba(255,255,255,0.5);
 }
+.card-wide > .mdl-card{
+	width: 512px;
+}
+.card-wide > .mdl-card__title {
+	color: #fff;
+	height: 220px;
+	background: url('../img/login_card_bg.png') center / cover;
+}
+.dmp-components__main-content.is-active{
+	display: block;
+}
+.dmp-components__main-content:not(.is-active){
+	display: none;
+}
 
-
-
-
+#dmp-components__login{
+	margin: 0 auto;
+}
 #dmp-components__web{
 	width: 100%;
 	height: 100%;

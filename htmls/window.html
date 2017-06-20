@@ -25,7 +25,31 @@
 	<main class="mdl-layout__content">
 		<div class="dmp-layout__table">
 			<div id="dmp-layout__main-frame" class="dmp-layout__table-cell">
-				<div id="dmp-components__web" class="dmp-layout__main-content is-active">
+				<div id="dmp-components__login" class="dmp-components__main-content card-wide mdl-card mdl-shadow--2dp">
+					<div class="mdl-card__title mdl-color--teal-A700">
+						<h2 class="mdl-card__title-text">Welcome</h2>
+					</div>
+					<div id="dmp-components__login-form">
+						<div id="dmp-components__textfield-id" class="mdl-textfield mdl-js-textfield">
+							<input class="mdl-textfield__input" type="text" id="dmp-components__input-id">
+							<label class="mdl-textfield__label" for="dmp-components__input-id">ID...</label>
+						</div>
+						<div id="dmp-components__textfield-site" class="mdl-textfield mdl-js-textfield">
+							<input class="mdl-textfield__input" type="text" id="dmp-components__input-site">
+							<label class="mdl-textfield__label" for="dmp-components__input-site">SITE...</label>
+						</div>
+						<div id="dmp-components__textfield-token" class="mdl-textfield mdl-js-textfield">
+							<input class="mdl-textfield__input" type="password" id="dmp-components__input-token">
+							<label class="mdl-textfield__label" for="dmp-components__input-token">PASSWORD...</label>
+						</div>
+						<div class="mdl-card__actions mdl-card--border">
+							<a id="login-button" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+								login
+							</a>
+						</div>
+					</div>
+				</div>
+				<div id="dmp-components__web" class="dmp-components__main-content dmp-layout__main-content is-active">
 					<div id="dmp-tabs" class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
 						<div id="dmp-tabs__tab-bar" class="mdl-tabs__tab-bar">
 						</div>
@@ -50,8 +74,6 @@
 				        	
 				        </div>
 					</div>
-				</div>
-				<div id="dmp-components__login" class="dmp-layout__main-content">
 				</div>
 			</div>
 		</div>

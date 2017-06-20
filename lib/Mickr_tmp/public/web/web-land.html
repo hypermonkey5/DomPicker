@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Web-Land!</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../lib/jquery/dist/jquery.js"></script>
+  <script src="../lib/bootstrap/bootstrap.js"></script>
+  <script src="../lib/material-design/dist/js/material.js"></script>
+  <script src="../lib/material-design/dist/js/ripples.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../css/setting.css">
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../lib/material-design/dist/css/bootstrap-material-design.css">
+  <link rel="stylesheet" type="text/css" href="../lib/material-design/dist/css/ripples.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
+  <script src="../lib/telepathy-client/lib/bson/bson.js"></script>
+  <script src="../lib/telepathy-client/lib/crypto-js/md5.js"></script>
+  <script src="../lib/telepathy-client/lib/EventEmitter/EventEmitter.js"></script>
+  <script src="../lib/telepathy-client/lib/node-uuid/uuid.js"></script>
+  <script src="../lib/telepathy-client/telepathy-client.js"></script>
+</head>
+
+<body>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="form-horizontal mickr-setting">
+          <fieldset>
+            <legend>Mickr Land</legend>
+            <div class="form-group">
+              <label for="inputID" class="col-md-2 control-label">ID</label>
+              <div class="col-md-10">
+                <input type="text" class="form-control" id="ID" placeholder="ID">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputSite" class="col-md-2 control-label">Site</label>
+              <div class="col-md-10">
+                <input type="text" class="form-control" id="Site" placeholder="Site">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputToken" class="col-md-2 control-label">Token</label>
+              <div class="col-md-10">
+                <input type="password" class="form-control" id="Token" placeholder="Token">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-md-10 col-md-offset-2">
+                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="sky" class="sky">
+
+  </div>
+  <script src="../js/module.js" charset="utf-8"></script>
+  <script>
+    $('ready', function(){
+      $.material.init();
+      var client = null;
+
+      $('#myModal').modal()
+      $('#submit').click((e) => {
+        $('body').removeClass('modal-open');
+        $('.modal-backdrop').remove();
+        $('#myModal').modal('hide');
+
+        var sky = new MickrSky({
+          "elementID": "sky",
+          "client": true,
+          "id": $('#ID').val() || String(Math.random().toString(36).slice(-8)),
+          "url": "ws://apps.wisdomweb.net:64260/ws/mik",
+          "site": $('#Site').val() || "test",
+          "token": $('#Token').val() || "Pad:9948"
+        });
+
+        // MickrClientの生成
+        sky.on('mickr', (req, res) => {
+          sky.addCloud(req.body.content)
+        })
+
+        //雲の生成
+        var cloud = sky.addCloud({
+          text: "もくもく",
+          keyword: "もわもわ",
+          textSize:"5px",
+          keywordSize:"20px",
+          // lap: 2
+          aroundDirection: false
+        });
+      });
+    })
+  </script>
+</body>
+
+</html>
+<!--  -->
